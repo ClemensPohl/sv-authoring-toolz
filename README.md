@@ -1,17 +1,32 @@
-# sv
+# AuthoringToolz
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+AuthoringToolz is a tool to create and edit JSON files for the AuthoringToolz project.
 
-## Creating a project
+## How to use
 
-If you're seeing this, you've probably already done this step. Congrats!
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm run dev`
+4. Open the app in your browser
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Features
 
-# create a new project in my-app
-npx sv create my-app
+- 📝 Create and edit JSON files with an intuitive user interface
+- 📚 Manage educational content with chapters and resources
+- 🎥 Support for video content with synchronized side texts
+- 📱 Responsive design for desktop and mobile use
+- 💾 Easy JSON import and export functionality
+
+## Project Structure
+
+```
+authoring-toolz/
+├── src/
+│   ├── routes/          # SvelteKit routes
+│   ├── components/      # Reusable components
+│   └── app.css         # Global styles
+├── static/             # Static assets
+└── package.json       # Project dependencies
 ```
 
 ## Developing
@@ -36,3 +51,18 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## Contributing
+
+We welcome contributions! Please feel free to submit a Pull Request.
+
+## Authors
+
+- Clemens
+- Manuel
+- Lucas
+- Tobias
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
