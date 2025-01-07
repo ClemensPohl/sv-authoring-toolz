@@ -1,0 +1,473 @@
+{
+    "description": {
+        "context": "Protokolle",
+        "date": "2024-06-15",
+        "furtherContent": [
+            {
+                "text": "Der Link zum Buch",
+                "url": "https://invisiblecow.de/blog-protokolle/"
+            },
+            {
+                "text": "Keine direkte Ressource: Feedback-Formular (auf InvisibleCow.de)",
+                "url": "https://invisiblecow.de/feedback-zum-thema-protokolle/"
+            }
+        ]
+    },
+    "content": [
+        {
+            "context": "Protokolle",
+            "chapter": "Allgemeines zu Protokollen",
+            "mainvideo": "videos/protokolle-clip-01-protokolle.mp4",
+            "ressources": [
+                {
+                    "text": "Skript",
+                    "url": "texte/protokolle-02-protokolle.pdf"
+                }
+            ],
+            "sidetexts": [
+                {
+                    "start": "00:00:08",
+                    "end": "00:00:42",
+                    "no": "no1",
+                    "text": "<h3>Der Begriff Protokoll</h3><p>Der Begriff Protokoll hat viele Bedeutungen, da er, wie eigentlich fast jeder Begriff, in verschiedenen Dom&auml;nen unterschiedliche Bedeutung tr&auml;gt. Zwar liegen einige Bedeutungen nah beieinander, aber es muss auch hier, wie immer, zun&auml;chst der jeweilige Anwendungsbereich ber&uuml;cksichtigt werden, um keine Missinterpretationen zu erzeugen.</p><p>Also soll auch hier begonnen werden mit der Betrachtung des Begriffs Protokoll.</p>"
+                },
+                {
+                    "start": "00:00:45",
+                    "end": "00:01:30",
+                    "no": "no2",
+                    "text": "<p>Als Protokoll wird in der Informationstechnologie - der IT - eine Reihe von Regeln und Verfahren verstanden, die festlegen, wie Daten zwischen<ul><li>Computern, Ger&auml;ten oder Softwareanwendungen</li><li>&uuml;bertragen, kommuniziert und empfangen werden.</li></ul></p><p>Diese Regeln gew&auml;hrleisten, dass die &uuml;bermittelten Daten korrekt interpretiert und verarbeitet werden k&ouml;nnen, unabh&auml;ngig von den Unterschieden in den Hardware- und Softwareumgebungen, die an der Kommunikation beteiligt sind.</p><p>Die Definition von Protokollen ist somit grundlegend f&uuml;r die Funktionsweise des Internets, von Netzwerken und damit f&uuml;r die Interoperabilit&auml;t verschiedener Technologien.</p>"
+                }
+            ],
+            "quiz": [
+                {
+                    "frage": "Was versteht man in der Informationstechnologie unter dem Begriff 'Protokoll'?",
+                    "antworten": [
+                        {
+                            "text": "Eine Reihe von Regeln und Verfahren zur &Uuml;bertragung von Daten zwischen Computern, Ger&auml;ten oder Softwareanwendungen.",
+                            "wert": true
+                        },
+                        {
+                            "text": "Ein spezifisches Computerprogramm zur Daten&uuml;bertragung.",
+                            "wert": false
+                        },
+                        {
+                            "text": "Eine digitale Signatur zur Authentifizierung von Benutzern.",
+                            "wert": false
+                        },
+                        {
+                            "text": "Eine Hardwarekomponente zur Netzwerkverwaltung.",
+                            "wert": false
+                        }
+                    ]
+                },
+                {
+                    "frage": "Welche Aspekte sind typischerweise im Kontext von Protokollen relevant?",
+                    "antworten": [
+                        {
+                            "text": "Fehlerbehandlung",
+                            "wert": true
+                        },
+                        {
+                            "text": "Datenverarbeitung",
+                            "wert": false
+                        },
+                        {
+                            "text": "Verbindungsmanagement",
+                            "wert": true
+                        },
+                        {
+                            "text": "Hardwarekonfiguration",
+                            "wert": false
+                        }
+                    ]
+                }
+            ],
+            "clickables": [
+                {
+                    "text": "Skript",
+                    "target": "_blank",
+                    "url": "https://de.wikipedia.org/wiki/Sender-Empf%C3%A4nger-Modell",
+                    "color": "rgba(255,0,0,0.5)",
+                    "frames": [
+                        {
+                            "time": "00:00:00",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        },
+                        {
+                            "time": "00:01:07",
+                            "x": 0,
+                            "y": 15,
+                            "w": 330,
+                            "h": 160
+                        },
+                        {
+                            "time": "00:01:16",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Skript",
+                    "target": "_blank",
+                    "url": "wap-protokolle-x.html?part=14",
+                    "color": "rgba(255,0,0,0.5)",
+                    "frames": [
+                        {
+                            "time": "00:00:00",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        },
+                        {
+                            "time": "00:03:45",
+                            "x": 0,
+                            "y": 15,
+                            "w": 330,
+                            "h": 160
+                        },
+                        {
+                            "time": "00:03:54",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        }
+                    ]
+                }
+            ],
+            "podcast": [
+                {
+                    "lang": "eng",
+                    "url": "podcasts/ic-podcast-protokolle-01-introduction.mp3"
+                }
+            ]
+        },
+        
+        {
+            "context": "Content2Context",
+            "chapter": "Implementierung von Protokollen",
+            "mainvideo": "videos/protokolle-clip-02-implementierung.mp4",
+            "ressources": [
+                {
+                    "text": "Skript",
+                    "url": "texte/protokolle-03-implementierung.pdf"
+                }
+            ],
+            "sidetexts": [
+                {
+                    "start": "00:00:10",
+                    "end": "00:00:30",
+                    "no": "no1",
+                    "text": "<h3>Die Implementierung eines Protokolls</h3><p>Die Implementierung eines Protokolls in einer eigenen Anwendung ist h&auml;ufig eine komplexe Aufgabe, die ein gutes Verst&auml;ndnis sowohl der Theorie hinter den Netzwerkprotokollen als auch praktische Programmierf&auml;higkeiten erfordert. Dieser Prozess soll hier nun in sieben einzelnen generischen Schritten angeschaut werden, um es ein wenig anschaulicher zu machen.</p>"
+                },
+                {
+                    "start": "00:00:40",
+                    "end": "00:01:40",
+                    "no": "no2",
+                    "text": "<h3>Schritt 1: Auswahl und Verst&auml;ndnis des Protokolls</h3><p>Bevor mit der Implementierung begonnen werden sollte, muss entschieden werden, welches Protokoll &uuml;berhaupt zum Einsatz kommen soll - klingt banal, ist es aber nicht - und zudem wird leider allzu h&auml;ufig eine begr&uuml;ndete Auswahl vernachl&auml;ssigt.</p><p>Die Auswahl h&auml;ngt von den Anforderungen der zu implementierenden Anwendung ab. Soll beispielsweise eine Webanwendung entwickelt werden, k&ouml;nnten HTTP oder WebSockets relevante Protokolle sein.<br>Es muss also Verst&auml;ndnis von zwei Seiten aus aufgebaut werden: zum einen das Verst&auml;ndnis der Spezifikation der zu entwickelnden Anwendung und zum anderen das Verst&auml;ndnis der Spezifikation des gew&auml;hlten Protokolls. Dies schlie&szlig;t die Regeln f&uuml;r die Daten&uuml;bertragung ebenso ein wie auch das Format der Nachrichten, die Handhabung von Fehlern, Sicherheitsaspekte usw.</p>"
+                },
+                {
+                    "start": "00:01:55",
+                    "end": "00:02:40",
+                    "no": "no3",
+                    "text": "<h3>Schritt 2: Entwerfen der Anwendungsarchitektur</h3><p>Wie bei jedem Projekt, muss auch bei der Implementierung eines Protokoll geplant werden, wie das zu entwickelnde System die Aspekte des Protokolls nutzen wird.<br>Dazu geh&ouml;ren auch die Entscheidungen, wie der Verbindungsaufbau, die Daten&uuml;bertragung, die Fehlerbehandlung und nat&uuml;rlich auch die Sicherheitsma&szlig;nahmen in der Anwendung implementiert werden. Es sollte &uuml;berlegt werden, ob und wie die Protokolllogik von anderen Teilen der Anwendung getrennt werden k&ouml;nnen, um eine klare Struktur und Wartbarkeit zu gew&auml;hrleisten.</p>"
+                },
+                {
+                    "start": "00:02:45",
+                    "end": "00:03:20",
+                    "no": "no4",
+                    "text": "<h3>Schritt 3: Auswahl der Programmiersprache und Tools</h3><p>Die Auswahl der Programmiersprache kann von dem zu implementierenden Protokoll abh&auml;ngen. Einige Sprachen bieten umfangreiche Standardbibliotheken oder Frameworks, die die Arbeit mit bestimmten Protokollen erleichtern. Zum Beispiel haben Python und JavaScript ausgezeichnete Unterst&uuml;tzung f&uuml;r HTTP und WebSockets durch Bibliotheken wie requests, http.server bzw. WebSocket.</p>"
+                },
+                {
+                    "start": "00:03:30",
+                    "end": "00:04:50",
+                    "no": "no4",
+                    "text": "<h3>Schritt 4: Implementierung der Protokollspezifikation</h3><p>Die Kodierung sollte unter Verwendung der Protokolldokumentation als Leitfaden begonnen und durchgef&uuml;hrt werden. Dazu sollten zun&auml;chst die grundlegenden Funktionen wie der Verbindungsaufbau und das Senden und Empfangen von Nachrichten umgesetzt werden. Besondere Beachtung sollte dabei darauf liegen, die Daten gem&auml;&szlig; den Protokollspezifikationen korrekt zu formatieren.<ul><li>F&uuml;r den Verbindungsaufbau:<br>Implementieren der Logik, um eine Verbindung zwischen Client und Server (oder einem anderen externen Service) aufzubauen.</li><li>F&uuml;r die Datenformatierung und -&uuml;bertragung:<br>Codieren der Funktionen, die notwendig sind, um Daten in das erforderliche Format zu konvertieren, sie zu senden und auf der Empf&auml;ngerseite zu verarbeiten.</li><li>Fehlerbehandlung:<br>Hinzuf&uuml;gen der Fehlererkennungs- und Wiederherstellungsmechanismen, um mit &Uuml;bertragungsfehlern oder anderen Problemen umzugehen.</li></ul>"
+                },
+                {
+                    "start": "00:05:05",
+                    "end": "00:05:20",
+                    "no": "no5",
+                    "text": "<h3>Schritt 5: Sicherheit</h3><p>Auch wenn oft ungeliebt, m&uuml;ssen auch die Sicherheitsmechanismen, die im Protokoll spezifiziert sind, wie zum Beispiel Verschl&uuml;sselung und Authentifizierung, implementiert werden, um die Daten&uuml;bertragung zu sch&uuml;tzen.</p>"
+                },
+                {
+                    "start": "00:05:25",
+                    "end": "00:05:50",
+                    "no": "no6",
+                    "text": "<h3>Schritt 6: Tests</h3><p>Abschlie&szlig;end muss die Implementierung dann nat&uuml;rlich auch noch gr&uuml;ndlich in verschiedenen Szenarien gepr&uuml;ft werden, um sicherzustellen, dass sie korrekt funktioniert. Dies umfasst Unit-Tests f&uuml;r einzelne Funktionen, Integrationstests f&uuml;r die Interaktion zwischen Komponenten und End-to-End-Tests, die die gesamte Kommunikationskette abdecken."
+                },
+                {
+                    "start": "00:05:55",
+                    "end": "00:06:40",
+                    "no": "no7",
+                    "text": "<h3>Schritt 7: Die beliebte Dokumentation und die Wartung</h3><p>Zu jeder Implementierung muss eine detaillierte Dokumentation erstellt werden. Dies schlie&szlig;t auch eine klare Anleitung f&uuml;r andere Entwickler ein, die an dem Projekt arbeiten, es sp&auml;ter warten m&uuml;ssen. Auch die Benutzer, die die Anwendung einsetzen m&ouml;chten - oder m&uuml;ssen - d&uuml;rfen keinesfalls vergessen werden.<br>Vorteilhaft ist es, wenn die Entwickler sich darauf einstellen, die Implementierung basierend auf Feedback, neuen Anforderungen oder &Auml;nderungen in den Protokollspezifikationen zu aktualisieren und zu warten."
+                },
+                {
+                    "start": "00:06:50",
+                    "end": "00:07:15",
+                    "no": "no8",
+                    "text": "<p>Die Implementierung eines Protokolls erfordert also sorgf&auml;ltige Planung, ein tiefes Verst&auml;ndnis der Protokollspezifikationen und solide Programmierkenntnisse. Durch den Schritt-f&uuml;r-Schritt-Ansatz kann dieser Prozess strukturiert und sichergestellt werden, dass der Anwendung eine robuste und effiziente Kommunikation zugrunde liegt.</p>"
+                }
+            ],
+            "quiz": [
+                {
+                    "frage": "Welche Schritte sind typischerweise Teil der Implementierung eines Protokolls in einer eigenen Anwendung?",
+                    "antworten": [
+                        {
+                            "text": "Auswahl und Verst&auml;ndnis des Protokolls",
+                            "wert": true
+                        },
+                        {
+                            "text": "Entwerfen der Anwendungsarchitektur",
+                            "wert": true
+                        },
+                        {
+                            "text": "Auswahl der Programmiersprache und Tools",
+                            "wert": true
+                        },
+                        {
+                            "text": "Abschlie&szlig;endes Testing der Anwendung",
+                            "wert": true
+                        }
+                    ]
+                },
+                {
+                    "frage": "Welche &Uuml;berlegungen sind bei der Auswahl des Protokolls f&uuml;r die Implementierung einer Webanwendung relevant?",
+                    "antworten": [
+                        {
+                            "text": "Sicherheitsaspekte",
+                            "wert": true
+                        },
+                        {
+                            "text": "Art der Daten&uuml;bertragung",
+                            "wert": true
+                        },
+                        {
+                            "text": "Anforderungen der zu entwickelnden Anwendung",
+                            "wert": true
+                        },
+                        {
+                            "text": "Verf&uuml;gbarkeit von Standardbibliotheken f&uuml;r die gew&auml;hlte Programmiersprache",
+                            "wert": false
+                        }
+                    ]
+                },
+                {
+                    "frage": "Welche Funktionen sollten bei der Implementierung der Protokollspezifikation besonders ber&uuml;cksichtigt werden?",
+                    "antworten": [
+                        {
+                            "text": "Verbindungsaufbau",
+                            "wert": true
+                        },
+                        {
+                            "text": "Datenformatierung und -&uuml;bertragung",
+                            "wert": true
+                        },
+                        {
+                            "text": "Fehlerbehandlung",
+                            "wert": true
+                        },
+                        {
+                            "text": "Benutzerauthentifizierung",
+                            "wert": false
+                        }
+                    ]
+                },
+                {
+                    "frage": "Warum ist die Auswahl der Programmiersprache und Tools f&uuml;r die Implementierung eines Protokolls relevant?",
+                    "antworten": [
+                        {
+                            "text": "Sie bestimmt die Architektur der Anwendung.",
+                            "wert": false
+                        },
+                        {
+                            "text": "Sie kann die Implementierung bestimmter Protokolle erleichtern.",
+                            "wert": true
+                        },
+                        {
+                            "text": "Sie beeinflusst die Auswahl der Sicherheitsmechanismen.",
+                            "wert": false
+                        },
+                        {
+                            "text": "Sie definiert die Art der Daten&auml;bertragung.",
+                            "wert": false
+                        }
+                    ]
+                },
+                {
+                    "frage": "Warum ist die Dokumentation und Wartung einer Implementierung wichtig?",
+                    "antworten": [
+                        {
+                            "text": "Sie dient als Grundlage f&uuml;r die Durchf&uuml;hrung von Tests.",
+                            "wert": false
+                        },
+                        {
+                            "text": "Sie erm&ouml;glicht es anderen Entwicklern, das Projekt sp&auml;ter zu warten und zu aktualisieren.",
+                            "wert": true
+                        },
+                        {
+                            "text": "Sie ist Voraussetzung f&uuml;r die Auswahl der Programmiersprache und Tools.",
+                            "wert": false
+                        },
+                        {
+                            "text": "Sie schlie&szlig;t die Entwicklung der Anwendungsarchitektur ab.",
+                            "wert": false
+                        }
+                    ]
+                },
+                {
+                    "frage": "Warum ist die Dokumentation und Wartung einer Implementierung wichtig?",
+                    "antworten": [
+                        {
+                            "text": "Sie dient als Grundlage f&uuml;r die Durchf&uuml;hrung von Tests.",
+                            "wert": false
+                        },
+                        {
+                            "text": "Sie erm&ouml;glicht es anderen Entwicklern, das Projekt sp&auml;ter zu warten und zu aktualisieren.",
+                            "wert": true
+                        },
+                        {
+                            "text": "Sie ist Voraussetzung f&uuml;r die Auswahl der Programmiersprache und Tools.",
+                            "wert": false
+                        },
+                        {
+                            "text": "Sie schlie&szlig;t die Entwicklung der Anwendungsarchitektur ab.",
+                            "wert": false
+                        }
+                    ]
+                }
+            ],
+            "clickables": [
+                {
+                    "text": "Skript",
+                    "target": "_blank",
+                    "url": "wap-protokolle-x.html?part=14",
+                    "color": "rgba(255,0,0,0.5)",
+                    "frames": [
+                        {
+                            "time": "00:00:00",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        },
+                        {
+                            "time": "00:01:15",
+                            "x": 0,
+                            "y": 15,
+                            "w": 330,
+                            "h": 160
+                        },
+                        {
+                            "time": "00:01:20",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Skript",
+                    "target": "_blank",
+                    "url": "wap-protokolle-x.html?part=25",
+                    "color": "rgba(255,0,0,0.5)",
+                    "frames": [
+                        {
+                            "time": "00:00:00",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        },
+                        {
+                            "time": "00:01:15",
+                            "x": 520,
+                            "y": 15,
+                            "w": 330,
+                            "h": 160
+                        },
+                        {
+                            "time": "00:01:20",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Skript",
+                    "target": "_blank",
+                    "url": "https://de.wikipedia.org/wiki/Liste_von_Programmiersprachen",
+                    "color": "rgba(255,0,0,0.5)",
+                    "frames": [
+                        {
+                            "time": "00:00:00",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        },
+                        {
+                            "time": "00:02:44",
+                            "x": 0,
+                            "y": 15,
+                            "w": 330,
+                            "h": 160
+                        },
+                        {
+                            "time": "00:02:54",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        }
+                    ]
+                },
+                {
+                    "text": "Skript",
+                    "target": "_blank",
+                    "url": "https://de.wikipedia.org/wiki/JavaScript",
+                    "color": "rgba(255,0,0,0.5)",
+                    "frames": [
+                        {
+                            "time": "00:00:00",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        },
+                        {
+                            "time": "00:03:10",
+                            "x": 0,
+                            "y": 15,
+                            "w": 330,
+                            "h": 160
+                        },
+                        {
+                            "time": "00:03:14",
+                            "x": 0,
+                            "y": 0,
+                            "w": 0,
+                            "h": 0
+                        }
+                    ]
+                }
+            ],
+            "podcast": [
+                {
+                    "lang": "eng",
+                    "url": "podcasts/ic-podcast-protokolle-02-implementierung.mp3"
+                }
+            ]
+        }
+    ]
+}
