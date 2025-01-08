@@ -21,6 +21,7 @@
 	function handleLoadJson() {
 		fileInput.click();
 	}
+
 </script>
 
 <div class="form-container">
@@ -34,6 +35,7 @@
 		/>
 		<button class="btn" onclick={handleLoadJson}>Load JSON</button>
 		<button class="btn" onclick={() => data.pageData.saveJson(root)}>Save JSON</button>
+		<button class="btn" onclick={() => root = data.pageData.createNewJson()}>Create New JSON</button>
 	</div>
 </div>
 

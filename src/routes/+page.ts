@@ -3,6 +3,7 @@ import type { Root as RootJson } from './wapJson';
 
 export interface PageData {
     pageData: {
+        createNewJson: () => void;
         handleFileUpload: (event: Event) => Promise<Root>;
         saveJson: (currentData: Root) => void;
         handleVideoUpload: (i: number, root: RootJson | null) => void;
@@ -14,6 +15,26 @@ export const load = (): PageData => {
 
     return {
         pageData: {
+            createNewJson: () => {
+                currentRoot = {
+                    description: {
+                        context: '',
+                        date: new Date().toISOString().split('T')[0],
+                        furtherContent: []
+                    },
+                    content: [{
+                        context: '',
+                        chapter: '',
+                        mainvideo: '',
+                        ressources: [],
+                        sidetexts: [],
+                        quiz: [],
+                        clickables: [],
+                        podcast: []
+                    }]
+                };
+                return currentRoot;
+            },
             handleFileUpload: async (event: Event) => {
                 const input = event.target as HTMLInputElement;
                 const file = input.files?.[0];
