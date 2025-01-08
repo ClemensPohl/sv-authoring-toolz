@@ -3,7 +3,7 @@ import type { Root } from './wapJson';
 export interface PageData {
     pageData: {
         handleFileUpload: (event: Event) => Promise<Root>;
-        saveJson: () => void;
+        saveJson: (currentData: Root) => void;
     }
 }
 
@@ -30,13 +30,9 @@ export const load = (): PageData => {
                     throw new Error('Invalid JSON file');
                 }
             },
-            saveJson: () => {
-                if (!currentRoot) {
-                    alert('No data to save');
-                    return;
-                }
+            saveJson: (currentData: Root) => {
 
-                const jsonString = JSON.stringify(currentRoot, null, 2);
+                const jsonString = JSON.stringify(currentData, null, 2);
                 const blob = new Blob([jsonString], { type: 'application/json' });
                 const url = URL.createObjectURL(blob);
                 
