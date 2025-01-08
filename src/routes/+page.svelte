@@ -35,10 +35,32 @@
         };
     });
 
+	// save json
+
+	function saveJson() {
+    if (root) {
+        const jsonString = JSON.stringify(root, null, 2);
+        const blob = new Blob([jsonString], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'authoringToolz.json';
+        document.body.appendChild(a);
+        a.click();
+        
+        // Cleanup
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
+}
+
 </script>
 {#if root}
+
 <!-- Base Description -->
 	<div class="form-container">
+		<button class="btn" on:click={saveJson}>Save JSON</button>
 		<h2>Description:</h2>
 		<label for="context">Content:</label>
 		<input id="context" bind:value={root.description.context} />
