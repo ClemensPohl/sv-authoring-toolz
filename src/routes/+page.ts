@@ -1,9 +1,11 @@
 import type { Root } from './wapJson';
+import type { Root as RootJson } from './wapJson';
 
 export interface PageData {
     pageData: {
         handleFileUpload: (event: Event) => Promise<Root>;
         saveJson: (currentData: Root) => void;
+        handleVideoUpload: (i: number, root: RootJson | null) => void;
     }
 }
 
@@ -45,7 +47,38 @@ export const load = (): PageData => {
                 // Cleanup
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
+            },
+            handleVideoUpload: (i: number, root: RootJson | null) => {
+                const vplayer = document.getElementById(`vplayer-${i}`) as HTMLVideoElement;
+                const vfile = document.getElementById(`videoFile-${i}`) as HTMLInputElement;
+                const vurl = document.getElementById(`video-url-${i}`) as HTMLInputElement;
+                
+                if (!vplayer || !vfile || !vfile.files?.length) {
+                    alert('Please select a video file first');
+                    return;
+                }
+
+                // Revoke any existing object URL to prevent memory leaks
+                if (vplayer.src) {
+                    URL.revokeObjectURL(vplayer.src);
+                }
+
+                const file = vfile.files[0];
+                // Validate file type
+                if (!file.type.startsWith('video/')) {
+                    alert('Please select a valid video file');
+                    return;
+                }
+
+                vplayer.src = URL.createObjectURL(file);
+
+                // Update the mainVideo path with the file name
+                if (root && root.content[i]) {
+                    vurl.value = vfile.files[0].name;
+                    root.content[i].mainvideo = vurl.value;
+                }
             }
         }
     };
 };
+

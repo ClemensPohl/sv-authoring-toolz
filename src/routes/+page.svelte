@@ -125,14 +125,34 @@
 					{/each}
 
 					<!-- Main Video change to take path upload oder so an scheiss fick mi leben-->
-					<div class="mb-2">
-						<label for="mainvideo-{i}" class="block mb-1">Main Video:</label>
+					<div class="video-container mb-2">
+						<label for="video-url-{i}" class="block mb-1">VIDEO-URL:</label>
 						<input
-							id="mainvideo-{i}"
-							type="text"
-							bind:value={c.mainVideo}
+							id="video-url-{i}"
+							type="url"
+							bind:value={c.mainvideo}
 							class="w-full p-2 border rounded"
 						/>
+
+						<label for="videoFile-{i}" class="block mb-1">Upload Video:</label>
+						<input
+							type="file"
+							id="videoFile-{i}"
+							class="file_multi_video mb-2"
+							accept="video/*"
+							onchange={() => data.pageData.handleVideoUpload(i, root)}
+						/>
+
+						<video id="vplayer-{i}" width="400" controls class="mt-2">
+							<track
+								kind="captions"
+								src="media/captions.vtt"
+								label="Deutsch"
+								srclang="de"
+								default
+							/>
+							Your browser does not support the video tag.
+						</video>
 					</div>
 
 					<!-- Side Texts -->
@@ -195,12 +215,21 @@
 				</div>
 			</details>
 		{/each}
-    </div>
+	</div>
 {:else}
 	<h1>No Json Loaded Capybara sad!</h1>
 	<img src="noJsonLoaded.jpg" alt="NoJSONLoaded" class="no-json-image" />
 	<div class="feather-container">
-		<svg class="feather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+		<svg
+			class="feather-icon"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+		>
 			<path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
 			<line x1="16" y1="8" x2="2" y2="22"></line>
 			<line x1="17.5" y1="15" x2="9" y2="15"></line>

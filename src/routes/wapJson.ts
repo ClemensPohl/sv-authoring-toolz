@@ -17,7 +17,7 @@ export interface FurtherContent {
 export interface Content {
 	context: string;
 	chapter: string;
-	mainVideo: string;
+	mainvideo: string;
 	ressources: Ressources[];
 	sidetexts: SideText[];
 	quiz: Quiz[];
