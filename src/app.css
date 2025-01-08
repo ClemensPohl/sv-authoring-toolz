@@ -323,3 +323,37 @@ textarea:focus {
         transform: translateX(-20px) rotate(-15deg);
     }
 }
+
+/* Sidetext specific styles */
+.sidetext-container {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    margin-bottom: 1rem;
+}
+
+.sidetext-inputs-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sidetext-input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidetext-input-group label {
+    margin-bottom: 0.5rem;
+}
+
+.sidetext-input-group input {
+    margin-bottom: 0;
+}
+
+.sidetext-textarea {
+    width: 100%;
+    min-height: 100px;
+    margin-top: 0.5rem;
+}

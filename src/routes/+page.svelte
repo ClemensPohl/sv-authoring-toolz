@@ -6,6 +6,7 @@
 	let root = $state<RootJson | null>(null);
 
 	let fileInput: HTMLInputElement;
+	let videoElements = $state<HTMLVideoElement[]>([]);
 
 	function handleFileUpload(event: Event) {
 		data.pageData
@@ -145,7 +146,13 @@
 							onchange={() => data.pageData.handleVideoUpload(i, root)}
 						/>
 
-						<video id="vplayer-{i}" width="400" controls class="mt-2">
+						<video 
+							id="vplayer-{i}" 
+							width="400" 
+							controls 
+							class="mt-2"
+							bind:this={videoElements[i]}
+						>
 							<track
 								kind="captions"
 								src="media/captions.vtt"
@@ -162,45 +169,43 @@
 						<h3>Side Texts</h3>
 						<div id="sidetexts-{i}">
 							{#each c.sidetexts as sidetext, i}
-								<div class="p-2 border rounded mb-2">
-									<div class="mb-2">
-										<label for="sidetext-start-{i}" class="block mb-1">Start Time:</label>
-										<input
-											id="sidetext-start-{i}"
-											type="text"
-											bind:value={sidetext.start}
-											class="w-full p-2 border rounded"
-										/>
+								<div class="sidetext-container">
+									<div class="sidetext-inputs-row">
+										<div class="sidetext-input-group">
+											<label for="sidetext-no-{i}">Number:</label>
+											<input
+												id="sidetext-no-{i}"
+												type="text"
+												bind:value={sidetext.no}
+											/>
+										</div>
+										<div class="sidetext-input-group">
+											<label for="sidetext-start-{i}">Start Time:</label>
+											<input
+												id="sidetext-start-{i}"
+												type="text"
+												bind:value={sidetext.start}
+											/>
+										</div>
+										<div class="sidetext-input-group">
+											<label for="sidetext-end-{i}">End Time:</label>
+											<input
+												id="sidetext-end-{i}"
+												type="text"
+												bind:value={sidetext.end}
+											/>
+										</div>
 									</div>
-									<div class="mb-2">
-										<label for="sidetext-end-{i}" class="block mb-1">End Time:</label>
-										<input
-											id="sidetext-end-{i}"
-											type="text"
-											bind:value={sidetext.end}
-											class="w-full p-2 border rounded"
-										/>
-									</div>
-									<div class="mb-2">
-										<label for="sidetext-no-{i}" class="block mb-1">Number:</label>
-										<input
-											id="sidetext-no-{i}"
-											type="text"
-											bind:value={sidetext.no}
-											class="w-full p-2 border rounded"
-										/>
-									</div>
-									<div class="mb-2">
-										<label for="sidetext-text-{i}" class="block mb-1">Text:</label>
+									<div>
+										<label for="sidetext-text-{i}">Text:</label>
 										<textarea
 											id="sidetext-text-{i}"
 											bind:value={sidetext.text}
-											class="w-full p-2 border rounded"
+											class="sidetext-textarea"
 										></textarea>
 									</div>
 								</div>
 								<hr class="rounded" />
-								<!-- DIVIDER  -->
 							{/each}
 							<button
 								class="btn"
