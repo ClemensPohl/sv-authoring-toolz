@@ -1,66 +1,48 @@
 <script lang="ts">
+	import type { PageData } from './$types';
 	import type { Root as RootType } from './wapJson';
-	import { onMount } from 'svelte';
 
-	let root: RootType | null = null;
+	const { data } = $props<{ data: PageData }>();
+	let root = $state<RootType | null>(null);
+
+	let fileInput: HTMLInputElement;
 
 	function handleFileUpload(event: Event) {
-        const input = event.target as HTMLInputElement;
-        const file = input.files?.[0];
-        
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                try {
-                    const json = JSON.parse(e.target?.result as string);
-                    root = json as RootType;
-                } catch (error) {
-                    console.error('Error parsing JSON:', error);
-                    alert('Invalid JSON file');
-                }
-            };
-            reader.readAsText(file);
-        }
-    }
-
-    onMount(() => {
-        const handleCustomEvent = (e: CustomEvent<Event>) => {
-            handleFileUpload(e.detail);
-        };
-
-        document.addEventListener('fileUpload', handleCustomEvent as EventListener);
-
-        return () => {
-            document.removeEventListener('fileUpload', handleCustomEvent as EventListener);
-        };
-    });
-
-	// save json
+		data.pageData.handleFileUpload(event)
+			.then((newRoot: RootType) => {
+				root = newRoot;
+			})
+			.catch((error: Error) => {
+				alert(error.message);
+			});
+	}
 
 	function saveJson() {
-    if (root) {
-        const jsonString = JSON.stringify(root, null, 2);
-        const blob = new Blob([jsonString], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-        
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'authoringToolz.json';
-        document.body.appendChild(a);
-        a.click();
-        
-        // Cleanup
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
-}
+		data.pageData.saveJson();
+	}
 
+	function handleLoadJson() {
+		fileInput.click();
+	}
 </script>
+<div class="form-container">
+	<div class="button-group">
+		<input 
+			type="file" 
+			accept=".json"
+			bind:this={fileInput}
+			onchange={handleFileUpload}
+			style="display: none"
+		/>
+		<button class="btn" onclick={handleLoadJson}>Load JSON</button>
+		<button class="btn" onclick={saveJson}>Save JSON</button>
+	</div>
+</div>
+
 {#if root}
 
 <!-- Base Description -->
 	<div class="form-container">
-		<button class="btn" on:click={saveJson}>Save JSON</button>
 		<h2>Description:</h2>
 		<label for="context">Content:</label>
 		<input id="context" bind:value={root.description.context} />
@@ -91,7 +73,7 @@
 				</div>
 			</div>
 		{/each}
-		<button class="btn" on:click={() => {
+		<button class="btn" onclick={() => {
 			if (root) {
 				root.description.furtherContent = [...root.description.furtherContent, { text: '', url: '' }];
 			}
@@ -201,7 +183,7 @@
 						</div>
 						<hr class="rounded"> <!-- DIVIDER  -->
 					{/each}
-					<button class="btn" on:click={() => c.sidetexts = [...c.sidetexts, { start: "1", end: "1", no: c.sidetexts.length + 1, text: '' }]}>
+					<button class="btn" onclick={() => c.sidetexts = [...c.sidetexts, { start: "1", end: "1", no: c.sidetexts.length + 1, text: '' }]}>
 						Add Side Text
 					</button>
 				</div>
