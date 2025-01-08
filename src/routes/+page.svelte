@@ -1,16 +1,16 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import type { Root as RootType } from './wapJson';
+	import type { Root as RootJson } from './wapJson';
 
 	const { data } = $props<{ data: PageData }>();
-	let root = $state<RootType | null>(null);
+	let root = $state<RootJson | null>(null);
 
 	let fileInput: HTMLInputElement;
 
 	function handleFileUpload(event: Event) {
 		data.pageData
 			.handleFileUpload(event)
-			.then((newRoot: RootType) => {
+			.then((newRoot: RootJson) => {
 				root = newRoot;
 			})
 			.catch((error: Error) => {
