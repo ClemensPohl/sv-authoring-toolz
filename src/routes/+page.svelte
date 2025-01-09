@@ -54,7 +54,6 @@
 			<details class="collapsible-container">
 				<summary class="collapsible-header">Content {i + 1}</summary>
 				<div class="collapsible-content">
-					
 					<ContextChapterResources {c} {i} />
 					<MainVideoSideTexts {c} {i} {videoElements} {data} {root} />
 				</div>
