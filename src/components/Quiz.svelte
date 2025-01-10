@@ -43,9 +43,36 @@
                         </div>
                     </div>
                 {/each}
+                <button
+                    class="btn mb-4"
+                    onclick={() => {
+                        quiz.antworten = [
+                            ...quiz.antworten,
+                            { text: '', wert: false }
+                        ];
+                    }}
+                >
+                    Add Answer
+                </button>
             </div>
         </div>
     {/each}
+    <button
+        class="btn"
+        onclick={() => {
+            c.quiz = [
+                ...c.quiz,
+                {
+                    frage: '',
+                    antworten: [
+                        { text: '', wert: false }
+                    ]
+                }
+            ];
+        }}
+    >
+        Add Question
+    </button>
 </div>
 
 <style>
@@ -142,5 +169,10 @@
     /* When checkbox is unchecked */
     .custom-checkbox:not(:checked) + .checkmark {
         border-color: #ff4444;
+    }
+
+    /* Add new styles for buttons */
+    .mb-4 {
+        margin-bottom: 1rem;
     }
 </style>
