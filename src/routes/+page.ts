@@ -28,7 +28,15 @@ export const load = (): PageData => {
                         mainvideo: '',
                         ressources: [],
                         sidetexts: [],
-                        quiz: [],
+                        quiz: [{
+                            frage: '',
+                            antworten: [
+                                { text: '', wert: false },
+                                { text: '', wert: false },
+                                { text: '', wert: false },
+                                { text: '', wert: false }
+                            ]
+                        }],
                         clickables: [],
                         podcast: []
                     }]

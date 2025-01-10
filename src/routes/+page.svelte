@@ -6,6 +6,8 @@
 	import MainVideoSideTexts from '../components/MainVideoSideTexts.svelte';
 	import NothingLoaded from '../components/NothingLoaded.svelte';
 	import Quiz from '../components/Quiz.svelte';
+	import Clickables from '../components/Clickables.svelte';
+	import Podcast from '../components/Podcast.svelte';
 
 	const { data } = $props<{ data: PageData }>();
 	let root = $state<RootJson | null>(null);
@@ -58,6 +60,8 @@
 					<ContextChapterResources {c} {i} />
 					<MainVideoSideTexts {c} {i} {videoElements} {data} {root} />
 					<Quiz {c} {i} />
+					<Clickables {c} {i} />
+					<Podcast {c} {i} />
 				</div>
 			</details>
 		{/each}
