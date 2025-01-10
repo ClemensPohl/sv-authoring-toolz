@@ -53,7 +53,7 @@
 		<h2>Contents</h2>
 		{#each root.content as c, i}
 			<details class="collapsible-container">
-				<summary class="collapsible-header">Content {i + 1}</summary>
+				<summary class="collapsible-header">{i + 1}. Content</summary>
 				<div class="collapsible-content">
 					<ContextChapterResources {c} {i} />
 					<MainVideoSideTexts {c} {i} {videoElements} {data} {root} />
