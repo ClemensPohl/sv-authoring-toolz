@@ -31,9 +31,9 @@ export interface Ressources {
 }
 
 export interface SideText {
-    start: string;  // Changed from number to string
-    end: string;    // Changed from number to string
-    no: number | string;  // Allow both number and string since 'no1' format is used
+    start: string; 
+    end: string;    
+    no: number | string;  
     text: string;
 }
 
@@ -44,7 +44,7 @@ export interface Quiz {
 
 export interface Answer {
 	text: string;
-	wert: number;
+	wert: boolean;
 }
 
 export interface Clickable {
