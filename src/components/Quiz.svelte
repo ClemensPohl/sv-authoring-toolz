@@ -6,7 +6,7 @@
 <div>
     <h1>Quiz</h1>
     {#each c.quiz as quiz, qIndex}
-        <div class="mb-8">
+        <div class="question-container">
             <div class="mb-4">
                 <label for="quiz-question-{i}-{qIndex}" class="block mb-1">Question {qIndex + 1}:</label>
                 <input
@@ -49,6 +49,10 @@
 </div>
 
 <style>
+    .question-container {
+        margin-bottom: 2rem;
+    }
+
     .answers-container {
         padding-left: 2rem;
         padding-right: 2rem;
