@@ -65,7 +65,33 @@
 				</div>
 			</details>
 		{/each}
+		<button
+		class="btn"
+		onclick={() => {
+			if (root) {
+				root.content = [
+					...(root?.content || []),
+					{
+						context: '',
+						chapter: '',
+						mainvideo: '',
+						ressources: [],
+						sidetexts: [],
+						quiz: [],
+						clickables: [],
+						podcast: []
+					},
+				];
+			}
+		}}
+	>
+		Add Content
+	</button>
 	</div>
+
+
+
+
 {:else}
 	<NothingLoaded />
 {/if}
